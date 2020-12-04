@@ -1,0 +1,123 @@
+$ cwltool ../pangenome-generate_spoa.cwl ../pubseq.yml
+INFO /home/peter/work/bh20-seq-resource/venv3/bin/cwltool 1.0.20190831161204
+INFO Resolved '../pangenome-generate_spoa.cwl' to 'file:///home/peter/work/czi-pangenome-usecase/pangenome-generate_spoa.cwl'
+INFO [workflow ] start
+INFO [workflow ] starting step dedup_and_sort_by_quality_and_len
+INFO [step dedup_and_sort_by_quality_and_len] start
+INFO [job dedup_and_sort_by_quality_and_len] /tmp/0qa9479k$ /bin/sh \
+    -c \
+    'python' '/tmp/tmpklfilc2h/stg65dba9a0-1882-4550-ad5a-82d2c346d788/sort_fasta_by_quality_and_len.py' '/tmp/tmpklfilc2h/stge3486948-38f0-4995-a003-671cec73d57d/PubSeq_100_SARS-CoV-2-genomes.fasta' > /tmp/0qa9479k/PubSeq_100_SARS-CoV-2-genomes.sorted_by_quality_and_len.fasta
+INFO [job dedup_and_sort_by_quality_and_len] completed success
+INFO [step dedup_and_sort_by_quality_and_len] completed success
+INFO [workflow ] starting step induceGraph
+INFO [step induceGraph] start
+WARNING [job induceGraph] Skipping Docker software container '--memory' limit despite presence of ResourceRequirement with ramMin and/or ramMax setting. Consider running with --strict-memory-limit for increased portability assurance.
+INFO [job induceGraph] /tmp/_y3larmo$ docker \
+    run \
+    -i \
+    --volume=/tmp/_y3larmo:/flKLkO:rw \
+    --volume=/tmp/9p8lobuf:/tmp:rw \
+    --volume=/tmp/0qa9479k/PubSeq_100_SARS-CoV-2-genomes.sorted_by_quality_and_len.fasta:/var/lib/cwl/stgad838db6-f84d-4a7d-8bcf-169d097c8a0d/PubSeq_100_SARS-CoV-2-genomes.sorted_by_quality_and_len.fasta:ro \
+    --workdir=/flKLkO \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/flKLkO \
+    --cidfile=/tmp/zq70ullb/20201204165238-288784.cid \
+    quay.io/biocontainers/spoa:3.4.0--hc9558a2_0 \
+    spoa \
+    /var/lib/cwl/stgad838db6-f84d-4a7d-8bcf-169d097c8a0d/PubSeq_100_SARS-CoV-2-genomes.sorted_by_quality_and_len.fasta \
+    -G \
+    -g \
+    -6 > /tmp/_y3larmo/PubSeq_100_SARS-CoV-2-genomes.sorted_by_quality_and_len.g6.gfa
+INFO [job induceGraph] Max memory used: 4015MiB
+INFO [job induceGraph] completed success
+INFO [step induceGraph] completed success
+INFO [workflow ] starting step buildGraph
+INFO [step buildGraph] start
+WARNING [job buildGraph] Skipping Docker software container '--memory' limit despite presence of ResourceRequirement with ramMin and/or ramMax setting. Consider running with --strict-memory-limit for increased portability assurance.
+INFO [job buildGraph] /tmp/rnfcez_2$ docker \
+    run \
+    -i \
+    --volume=/tmp/rnfcez_2:/flKLkO:rw \
+    --volume=/tmp/kmqjyfrn:/tmp:rw \
+    --workdir=/flKLkO \
+    --read-only=true \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/flKLkO \
+    --cidfile=/tmp/0db2oszi/20201204165524-593473.cid \
+    odgi:2020-12-01 \
+    /bin/sh \
+    -c \
+    odgi build -g '/flKLkO/PubSeq_100_SARS-CoV-2-genomes.sorted_by_quality_and_len.g6.gfa' -o - | odgi unchop -i - -o - | odgi sort -i - -p s -o PubSeq_100_SARS-CoV-2-genomes.sorted_by_quality_and_len.g6.unchop.sorted.odgi
+INFO [job buildGraph] Max memory used: 35MiB
+INFO [job buildGraph] completed success
+INFO [step buildGraph] completed success
+INFO [workflow ] starting step vizGraph
+INFO [step vizGraph] start
+WARNING [job vizGraph] Skipping Docker software container '--memory' limit despite presence of ResourceRequirement with ramMin and/or ramMax setting. Consider running with --strict-memory-limit for increased portability assurance.
+INFO [job vizGraph] /tmp/mmm4sou_$ docker \
+    run \
+    -i \
+    --volume=/tmp/mmm4sou_:/flKLkO:rw \
+    --volume=/tmp/imye6134:/tmp:rw \
+    --volume=/tmp/rnfcez_2/PubSeq_100_SARS-CoV-2-genomes.sorted_by_quality_and_len.g6.unchop.sorted.odgi:/var/lib/cwl/stgcbc5428c-228e-4fb7-a535-0b32ceeb4cc9/PubSeq_100_SARS-CoV-2-genomes.sorted_by_quality_and_len.g6.unchop.sorted.odgi:ro \
+    --workdir=/flKLkO \
+    --read-only=true \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/flKLkO \
+    --cidfile=/tmp/u3nwxont/20201204165532-560167.cid \
+    odgi:2020-12-01 \
+    odgi \
+    viz \
+    --idx=/var/lib/cwl/stgcbc5428c-228e-4fb7-a535-0b32ceeb4cc9/PubSeq_100_SARS-CoV-2-genomes.sorted_by_quality_and_len.g6.unchop.sorted.odgi \
+    --out=PubSeq_100_SARS-CoV-2-genomes.sorted_by_quality_and_len.g6.unchop.sorted.png \
+    --height=400 \
+    --path-height=4 \
+    --width=1400
+INFO [job vizGraph] Max memory used: 0MiB
+INFO [job vizGraph] completed success
+INFO [step vizGraph] completed success
+INFO [workflow ] completed success
+{
+    "odgiGraph": {
+        "location": "file:///home/peter/work/czi-pangenome-usecase/tmp/PubSeq_100_SARS-CoV-2-genomes.sorted_by_quality_and_len.g6.unchop.sorted.odgi",
+        "basename": "PubSeq_100_SARS-CoV-2-genomes.sorted_by_quality_and_len.g6.unchop.sorted.odgi",
+        "class": "File",
+        "checksum": "sha1$9648acb7ef31ac7c57775b195b2c2181bfd9dddd",
+        "size": 744794,
+        "path": "/home/peter/work/czi-pangenome-usecase/tmp/PubSeq_100_SARS-CoV-2-genomes.sorted_by_quality_and_len.g6.unchop.sorted.odgi"
+    },
+    "odgiPNG": {
+        "location": "file:///home/peter/work/czi-pangenome-usecase/tmp/PubSeq_100_SARS-CoV-2-genomes.sorted_by_quality_and_len.g6.unchop.sorted.png",
+        "basename": "PubSeq_100_SARS-CoV-2-genomes.sorted_by_quality_and_len.g6.unchop.sorted.png",
+        "class": "File",
+        "checksum": "sha1$0b0d2d876c6c3dfbab12c3569802d5e86df1fb6c",
+        "size": 16988,
+        "format": "https://www.iana.org/assignments/media-types/image/png",
+        "path": "/home/peter/work/czi-pangenome-usecase/tmp/PubSeq_100_SARS-CoV-2-genomes.sorted_by_quality_and_len.g6.unchop.sorted.png"
+    },
+    "readsMergeDedupSortedByQualAndLen": {
+        "location": "file:///home/peter/work/czi-pangenome-usecase/tmp/PubSeq_100_SARS-CoV-2-genomes.sorted_by_quality_and_len.fasta",
+        "basename": "PubSeq_100_SARS-CoV-2-genomes.sorted_by_quality_and_len.fasta",
+        "class": "File",
+        "checksum": "sha1$e4e35b0c236178b929bb3b4bf5fd2b8cf5a0647d",
+        "size": 2990103,
+        "path": "/home/peter/work/czi-pangenome-usecase/tmp/PubSeq_100_SARS-CoV-2-genomes.sorted_by_quality_and_len.fasta"
+    },
+    "spoaGFA": {
+        "location": "file:///home/peter/work/czi-pangenome-usecase/tmp/PubSeq_100_SARS-CoV-2-genomes.sorted_by_quality_and_len.g6.gfa",
+        "basename": "PubSeq_100_SARS-CoV-2-genomes.sorted_by_quality_and_len.g6.gfa",
+        "class": "File",
+        "checksum": "sha1$29a1fced9f63f4f53af86cf4e2ae95bc9059697c",
+        "size": 21818427,
+        "path": "/home/peter/work/czi-pangenome-usecase/tmp/PubSeq_100_SARS-CoV-2-genomes.sorted_by_quality_and_len.g6.gfa"
+    }
+}
+INFO Final process status is success

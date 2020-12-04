@@ -12,7 +12,7 @@ cwl-runner pangenome-generate_spoa.cwl pubseq.yml
 
 Interoperability demo
 
-|Software|Result|
+|Software|Logs|
 |--------|-----------|
-|cwltool|success|
-|Arvados|success|
+|cwltool|[Example run](logs/cwltool.log)|
+|Arvados|[Example run](https://workbench.lugli.arvadosapi.com/container_requests/lugli-xvhdp-bhsestl25hm82p5) [Results](https://workbench.lugli.arvadosapi.com/collections/lugli-4zz18-slfh7i3ogck04a8)|
