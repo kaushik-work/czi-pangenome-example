@@ -15,4 +15,5 @@ Interoperability demo
 |Software|Logs|
 |--------|-----------|
 |cwltool|[Example run](logs/cwltool.log)|
-|Arvados|[Example run](https://workbench.lugli.arvadosapi.com/container_requests/lugli-xvhdp-bhsestl25hm82p5) [Results](https://workbench.lugli.arvadosapi.com/collections/lugli-4zz18-slfh7i3ogck04a8)|
+|Arvados|[Example run](https://workbench.lugli.arvadosapi.com/container_requests/lugli-xvhdp-bhsestl25hm82p5) / [Results](https://workbench.lugli.arvadosapi.com/collections/lugli-4zz18-slfh7i3ogck04a8)|
+|Toil|[Example run](logs/toil.log)|

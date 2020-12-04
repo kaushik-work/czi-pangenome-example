@@ -1,0 +1,71 @@
+$ toil-cwl-runner --tmpdir-prefix t3 ../pangenome-generate_spoa.cwl ../pubseq.yml
+[2020-12-04T17:15:40-0500] [MainThread] [I] [cwltool] Resolved '../pangenome-generate_spoa.cwl' to 'file:///home/peter/work/czi-pangenome-usecase/pangenome-generate_spoa.cwl'
+[2020-12-04T17:15:42-0500] [MainThread] [I] [toil.job] Saving graph of 2 jobs, 2 new
+[2020-12-04T17:15:42-0500] [MainThread] [I] [toil.job] Processing job 'ResolveIndirect' kind-ResolveIndirect/instance-8gxms3w_
+[2020-12-04T17:15:42-0500] [MainThread] [I] [toil.job] Processing job 'CWLWorkflow' kind-CWLWorkflow/instance-10davt46
+[2020-12-04T17:15:42-0500] [MainThread] [I] [toil] Running Toil version 5.0.0-f182c6420554b258632a40bfa47a8f69e56675e4 on host curiipeter.
+
+[2020-12-04T17:15:42-0500] [MainThread] [I] [toil.worker] Redirecting logging to /home/peter/work/czi-pangenome-usecase/tmp2/t3ejf0yux2/node-ebb3c910-549d-4b7a-92e6-b1a1fcbfd23b-207ef9ffe58642d282df4c3fb8b6a6b9/tmpepfvdr74/worker_log.txt
+Workflow Progress 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 (0 failures) [00:00<00:00, 2.08 jobs/s][2020-12-04T17:15:42-0500] [MainThread] [I] [toil.leader] 0 jobs are running, 0 jobs are issued and waiting to run
+Workflow Progress 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 (0 failures) [00:00<00:00, 2.07 jobs/s][2020-12-04T17:15:42-0500] [MainThread] [I] [toil.leader] Issued job 'CWLJob' python kind-CWLJob/instance-yjcz_li6 with job batch system ID: 1 and cores: 1, disk: 2.0 G, and memory: 2.0 G
+[2020-12-04T17:15:42-0500] [MainThread] [I] [toil.worker] Redirecting logging to /home/peter/work/czi-pangenome-usecase/tmp2/t3ejf0yux2/node-ebb3c910-549d-4b7a-92e6-b1a1fcbfd23b-207ef9ffe58642d282df4c3fb8b6a6b9/tmpnw3dafxq/worker_log.txt
+[2020-12-04T17:15:44-0500] [MainThread] [I] [toil.leader] Job ended: 'CWLJob' python kind-CWLJob/instance-yjcz_li6
+Workflow Progress 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 (0 failures) [00:02<00:00, 0.97 jobs/s][2020-12-04T17:15:44-0500] [MainThread] [I] [toil.leader] Issued job 'CWLJob' spoa kind-CWLJob/instance-ael37hpu with job batch system ID: 2 and cores: 1, disk: 1.0 G, and memory: 15.0 G
+[2020-12-04T17:15:44-0500] [MainThread] [I] [toil.worker] Redirecting logging to /home/peter/work/czi-pangenome-usecase/tmp2/t3ejf0yux2/node-ebb3c910-549d-4b7a-92e6-b1a1fcbfd23b-207ef9ffe58642d282df4c3fb8b6a6b9/tmpk7cpc2k8/worker_log.txt
+Workflow Progress  67%|█████████████████████████████████████████████████████████████████████████████████████████████▍                                              | 2/3 (0 failures) [00:10<00:05, 0.20 jobs/s]
+
+Workflow Progress  67%|█████████████████████████████████████████████████████████████████████████████████████████████▍                                              | 2/3 (0 failures) [02:50<01:25, 0.01 jobs/s][2020-12-04T17:18:32-0500] [MainThread] [I] [toil.leader] Job ended: 'CWLJob' spoa kind-CWLJob/instance-ael37hpu
+Workflow Progress 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 (0 failures) [02:50<00:00, 0.02 jobs/s][2020-12-04T17:18:32-0500] [MainThread] [I] [toil.worker] Redirecting logging to /home/peter/work/czi-pangenome-usecase/tmp2/t3ejf0yux2/node-ebb3c910-549d-4b7a-92e6-b1a1fcbfd23b-207ef9ffe58642d282df4c3fb8b6a6b9/tmp0_g8h2ko/worker_log.txt
+Workflow Progress 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 4/4 (0 failures) [02:52<00:00, 0.02 jobs/s][2020-12-04T17:18:34-0500] [MainThread] [I] [toil.leader] Issued job 'CWLJob' kind-CWLJob/instance-0wuiqanu with job batch system ID: 4 and cores: 1, disk: 1.0 G, and memory: 7.0 G
+[2020-12-04T17:18:35-0500] [MainThread] [I] [toil.worker] Redirecting logging to /home/peter/work/czi-pangenome-usecase/tmp2/t3ejf0yux2/node-ebb3c910-549d-4b7a-92e6-b1a1fcbfd23b-207ef9ffe58642d282df4c3fb8b6a6b9/tmpbh0agmn9/worker_log.txt
+Workflow Progress  80%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████                            | 4/5 (0 failures) [03:02<00:46, 0.02 jobs/s][2020-12-04T17:18:45-0500] [MainThread] [I] [toil.leader] Job ended: 'CWLJob' kind-CWLJob/instance-0wuiqanu
+Workflow Progress 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 (0 failures) [03:03<00:00, 0.03 jobs/s][2020-12-04T17:18:45-0500] [MainThread] [I] [toil.worker] Redirecting logging to /home/peter/work/czi-pangenome-usecase/tmp2/t3ejf0yux2/node-ebb3c910-549d-4b7a-92e6-b1a1fcbfd23b-207ef9ffe58642d282df4c3fb8b6a6b9/tmpyuiq5x0o/worker_log.txt
+Workflow Progress 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 (0 failures) [03:05<00:00, 0.03 jobs/s][2020-12-04T17:18:47-0500] [MainThread] [I] [toil.leader] Issued job 'CWLJob' odgi viz kind-CWLJob/instance-8kh5yw4a with job batch system ID: 6 and cores: 1, disk: 1.0 G, and memory: 7.0 G
+[2020-12-04T17:18:47-0500] [MainThread] [I] [toil.worker] Redirecting logging to /home/peter/work/czi-pangenome-usecase/tmp2/t3ejf0yux2/node-ebb3c910-549d-4b7a-92e6-b1a1fcbfd23b-207ef9ffe58642d282df4c3fb8b6a6b9/tmpweo2c1qr/worker_log.txt
+Workflow Progress  86%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                    | 6/7 (0 failures) [03:07<00:31, 0.03 jobs/s][2020-12-04T17:18:50-0500] [MainThread] [I] [toil.leader] Job ended: 'CWLJob' odgi viz kind-CWLJob/instance-8kh5yw4a
+Workflow Progress 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 (0 failures) [03:09<00:00, 0.04 jobs/s][2020-12-04T17:18:51-0500] [MainThread] [I] [toil.worker] Redirecting logging to /home/peter/work/czi-pangenome-usecase/tmp2/t3ejf0yux2/node-ebb3c910-549d-4b7a-92e6-b1a1fcbfd23b-207ef9ffe58642d282df4c3fb8b6a6b9/tmpcuzte2k7/worker_log.txt
+Workflow Progress 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 8/8 (0 failures) [03:09<00:00, 0.04 jobs/s][2020-12-04T17:18:52-0500] [MainThread] [I] [toil.worker] Redirecting logging to /home/peter/work/czi-pangenome-usecase/tmp2/t3ejf0yux2/node-ebb3c910-549d-4b7a-92e6-b1a1fcbfd23b-207ef9ffe58642d282df4c3fb8b6a6b9/tmp0lx52m12/worker_log.txt
+Workflow Progress 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 9/9 (0 failures) [03:10<00:00, 0.05 jobs/s][2020-12-04T17:18:52-0500] [MainThread] [I] [toil.worker] Redirecting logging to /home/peter/work/czi-pangenome-usecase/tmp2/t3ejf0yux2/node-ebb3c910-549d-4b7a-92e6-b1a1fcbfd23b-207ef9ffe58642d282df4c3fb8b6a6b9/tmpokone69d/worker_log.txt
+Workflow Progress 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 10/10 (0 failures) [03:11<00:00, 0.05 jobs/s][2020-12-04T17:18:53-0500] [MainThread] [I] [toil.worker] Redirecting logging to /home/peter/work/czi-pangenome-usecase/tmp2/t3ejf0yux2/node-ebb3c910-549d-4b7a-92e6-b1a1fcbfd23b-207ef9ffe58642d282df4c3fb8b6a6b9/tmp41rf09u6/worker_log.txt
+Workflow Progress 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 11/11 (0 failures) [03:12<00:00, 0.06 jobs/s][2020-12-04T17:18:54-0500] [MainThread] [I] [toil.worker] Redirecting logging to /home/peter/work/czi-pangenome-usecase/tmp2/t3ejf0yux2/node-ebb3c910-549d-4b7a-92e6-b1a1fcbfd23b-207ef9ffe58642d282df4c3fb8b6a6b9/tmp2fpg9627/worker_log.txt
+Workflow Progress 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 12/12 (0 failures) [03:12<00:00, 0.06 jobs/s][2020-12-04T17:18:56-0500] [MainThread] [I] [toil.leader] Finished toil run successfully.
+
+{
+    "odgiGraph": {
+        "location": "file:///home/peter/work/czi-pangenome-usecase/tmp2/PubSeq_100_SARS-CoV-2-genomes.sorted_by_quality_and_len.g6.unchop.sorted.odgi",
+        "basename": "PubSeq_100_SARS-CoV-2-genomes.sorted_by_quality_and_len.g6.unchop.sorted.odgi",
+        "nameroot": "PubSeq_100_SARS-CoV-2-genomes.sorted_by_quality_and_len.g6.unchop.sorted",
+        "nameext": ".odgi",
+        "class": "File",
+        "checksum": "sha1$9648acb7ef31ac7c57775b195b2c2181bfd9dddd",
+        "size": 744794
+    },
+    "odgiPNG": {
+        "location": "file:///home/peter/work/czi-pangenome-usecase/tmp2/PubSeq_100_SARS-CoV-2-genomes.sorted_by_quality_and_len.g6.unchop.sorted.png",
+        "basename": "PubSeq_100_SARS-CoV-2-genomes.sorted_by_quality_and_len.g6.unchop.sorted.png",
+        "nameroot": "PubSeq_100_SARS-CoV-2-genomes.sorted_by_quality_and_len.g6.unchop.sorted",
+        "nameext": ".png",
+        "class": "File",
+        "checksum": "sha1$0b0d2d876c6c3dfbab12c3569802d5e86df1fb6c",
+        "size": 16988,
+        "format": "https://www.iana.org/assignments/media-types/image/png"
+    },
+    "readsMergeDedupSortedByQualAndLen": {
+        "location": "file:///home/peter/work/czi-pangenome-usecase/tmp2/PubSeq_100_SARS-CoV-2-genomes.sorted_by_quality_and_len.fasta",
+        "basename": "PubSeq_100_SARS-CoV-2-genomes.sorted_by_quality_and_len.fasta",
+        "nameroot": "PubSeq_100_SARS-CoV-2-genomes.sorted_by_quality_and_len",
+        "nameext": ".fasta",
+        "class": "File",
+        "checksum": "sha1$e4e35b0c236178b929bb3b4bf5fd2b8cf5a0647d",
+        "size": 2990103
+    },
+    "spoaGFA": {
+        "location": "file:///home/peter/work/czi-pangenome-usecase/tmp2/PubSeq_100_SARS-CoV-2-genomes.sorted_by_quality_and_len.g6.gfa",
+        "basename": "PubSeq_100_SARS-CoV-2-genomes.sorted_by_quality_and_len.g6.gfa",
+        "nameroot": "PubSeq_100_SARS-CoV-2-genomes.sorted_by_quality_and_len.g6",
+        "nameext": ".gfa",
+        "class": "File",
+        "checksum": "sha1$29a1fced9f63f4f53af86cf4e2ae95bc9059697c",
+        "size": 21818427
+    }
+}[2020-12-04T17:18:56-0500] [MainThread] [I] [toil.common] Successfully deleted the job store: FileJobStore(/home/peter/work/czi-pangenome-usecase/tmp2/t36ybfqvrp)
