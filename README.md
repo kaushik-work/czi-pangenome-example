@@ -1,5 +1,7 @@
 Demo CWL workflow
 
+![](pangenome-generate_spoa.svg)
+
 Generate graph genome (with visualization) from a set of sequences using `spoa` and `odgi`.
 
 Sample data set of 100 SARS-CoV-2 viral genomes, from [PubSeq](http://covid-19.genenetwork.org/)
