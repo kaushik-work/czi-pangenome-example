@@ -1,0 +1,3 @@
+seqs:
+  class: File
+  location: PubSeq_100_SARS-CoV-2-genomes.fasta

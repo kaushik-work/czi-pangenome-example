@@ -1,0 +1,16 @@
+FROM debian:buster
+WORKDIR /usr/src/app
+RUN apt-get update && apt-get install --no-install-recommends -y \
+  ca-certificates \
+  bash \
+  cmake \
+  git \
+  g++ \
+  make \
+  python-dev \
+  && rm -rf /var/lib/apt/lists/*
+RUN git clone --recursive https://github.com/vgteam/odgi.git && cd odgi && git checkout e14c54b7cec1496c6560dfe160223490c329657f
+RUN cd odgi && cmake -H. -Bbuild && cmake --build build -- -j 3
+FROM debian:buster
+RUN apt-get update && apt-get install -y libgomp1 libatomic1 && rm -rf /var/lib/apt/lists/*
+COPY --from=0 /usr/src/app/odgi/bin/odgi /usr/local/bin
