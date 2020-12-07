@@ -1,6 +1,8 @@
 cwlVersion: v1.0
 class: CommandLineTool
 hints:
+  DockerRequirement:
+    dockerPull: "python:latest"
   ResourceRequirement:
     coresMin: 1
     ramMin: 3000
