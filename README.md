@@ -4,6 +4,10 @@ Demo CWL workflow
 
 Generate graph genome (with visualization) from a set of sequences using `spoa` and `odgi`.
 
+This workflow constructs a partial order alignment of sequences in order to induce a pangenome graph, and generates a
+visualization of the paths through the graph.  From the visualization, one can determine which parts of the pangenome
+are conserved, and which sequences have notable mutations requiring further study.
+
 Sample data set of 100 SARS-CoV-2 viral genomes, from [PubSeq](http://covid-19.genenetwork.org/)
 
 ```
