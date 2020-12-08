@@ -17,6 +17,7 @@ hints:
     ramMin: $(7 * 1024)
     outdirMin: 1
   DockerRequirement:
+    dockerPull: cgc-images.sbgenomics.com/kghose/odgi:1.0
     dockerImageId: odgi:2020-12-01
     dockerFile: {$include: odgi-dockerfile}
 inputs:

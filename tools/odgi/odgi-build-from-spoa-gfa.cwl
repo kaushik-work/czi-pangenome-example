@@ -9,19 +9,20 @@ outputs:
       glob: $(inputs.inputGFA.nameroot).unchop.sorted.odgi
 requirements:
   InlineJavascriptRequirement: {}
+  InitialWorkDirRequirement:
+    # Will fail if input file is not writable (odgi bug)
+    listing:
+      - entry: $(inputs.inputGFA)
+        writable: true
 hints:
   DockerRequirement:
+    dockerPull: cgc-images.sbgenomics.com/kghose/odgi:1.0
     dockerImageId: odgi:2020-12-01
     dockerFile: {$include: odgi-dockerfile}
   ResourceRequirement:
     coresMin: 1
     ramMin: $(7 * 1024)
     outdirMin: $(Math.ceil((inputs.inputGFA.size/(1024*1024*1024)+1) * 2))
-  InitialWorkDirRequirement:
-    # Will fail if input file is not writable (odgi bug)
-    listing:
-      - entry: $(inputs.inputGFA)
-        writable: true
   ShellCommandRequirement: {}
 arguments:
   - shellQuote: false

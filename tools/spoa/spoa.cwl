@@ -4,7 +4,9 @@ inputs:
   readsFA: File
 outputs:
   spoaGFA:
-    type: stdout
+    type: File
+    outputBinding: {glob: $(inputs.readsFA.nameroot).g6.gfa}
+
 requirements:
   InlineJavascriptRequirement: {}
 hints:
